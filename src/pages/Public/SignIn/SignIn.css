@@ -1,0 +1,34 @@
+.login-form {
+    padding: 30px;
+    background-color: #0f0f1f;
+    border-radius: 25px;
+}
+
+.login-form, h1 {
+    color: #E3E3E3 !important;
+}
+
+.login-form, button {
+    color: #63A998;
+}
+
+.login-form, a {
+    color: #E3E3E3 !important;
+}
+
+.SubmitBtn {
+    color: #E3E3E3 !important;
+    background-color: #4F5DEA !important;
+    border-color: #4F5DEA !important;
+}
+
+.SignInPage {
+    height: 100%;
+    background-image: linear-gradient(
+            rgba(30, 30, 30, 0.87),
+            rgba(34, 34, 34, 0.2)
+    ), url("../../../assets/mountain_background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

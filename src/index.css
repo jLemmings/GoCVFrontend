@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%
+}
+
+#root, #container {
+    height: 100%;
+    background-color: #2B2E44;
+    display: flex;
+    flex-direction: column;
+}
+
+.ProfileImage {
+    height: 175px;
+    border-radius: 50%;
+}
+
+.Profile {
+    margin-top: 13px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ProfileName {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    color: white;
+}
+
+.MenuBar, .ant-menu {
+    background: none;
+    color: #E3E3E3;
+}
+
+.MyFooter {
+    height: 50px;
+    flex-shrink: 0;
+    background-color: #1d1c24;
+}
+
+.footer-inner {
+    text-align: center;
+}
+
+
+.footer-icon {
+    font-size: 25px;
+    color: #019B6C;
+}
+.footer-item {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+ height: 100%;
+}
+
+.component {
+    background-color: #2b2e44;
+    height: 100%;
+    color: white;
+}
+
+.ant-layout-footer {
+    padding: 0 0 0 0;
+}
+
+.logo {
+    width: 100%;
+    background-image: url("assets/profile_image.jpg");
+    border-radius: 50%;
+}

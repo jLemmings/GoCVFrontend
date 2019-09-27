@@ -1,0 +1,10 @@
+export const SIGN_IN = "/admin/login";
+export const HOME = "/";
+export const ABOUT = "/about";
+export const EXPERIENCE = "/experience";
+export const EDUCATION = "/education";
+export const SKILLS = "/skills";
+export const PROJECTS = "/projects";
+export const STATS = "/stats";
+export const EDIT_PROFILE = "/admin/profile";
+export const ADMIN_HOME = "/admin";

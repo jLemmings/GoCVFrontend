@@ -1,0 +1,30 @@
+{
+  "name": "go-cv-frontend",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "antd": "^3.23.3",
+    "env-cmd": "^10.0.1",
+    "firebase": "^6.6.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "PORT=8080 react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "tslint": "tslint --project tsconfig.json",
+    "tslint:fix": "tslint --fix --project tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-router-dom": "^4.3.5",
+    "typescript": "^3.6.3"
+  }
+}
