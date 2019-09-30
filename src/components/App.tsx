@@ -15,11 +15,17 @@ import {About} from "../pages/Public/About";
 import {Projects} from "../pages/Public/Projects";
 import {Stats} from "../pages/Public/Stats";
 import {EditProfile} from "../pages/Authorized/EditProfile";
+import {UserState} from "../model/user";
+import {sendUser} from '../actions/actions';
 
-class AppComponent extends React.Component {
+interface AppProps {
+    sendUser: typeof sendUser
+    user: UserState
+}
+
+class AppComponent extends React.Component<AppProps> {
     constructor(props: any) {
         super(props);
-
         this.state = {
             authUser: null
         };
@@ -37,6 +43,7 @@ class AppComponent extends React.Component {
         return (
             <BrowserRouter>
                 <Switch>
+                    <Redirect exact={true} from="/" to={routes.ABOUT}/>
                     <Route exact={true} path={routes.HOME} component={Home}/>
                     <Route exact={true} path={routes.SIGN_IN} component={SignIn}/>
                     <Route exact={true} path={routes.ADMIN_HOME} component={AdminHome}/>
