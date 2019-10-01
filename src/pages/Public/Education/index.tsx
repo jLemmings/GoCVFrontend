@@ -1,16 +1,12 @@
 import * as React from "react";
 import {Layout} from "antd";
-import {useSelector} from "react-redux";
-import {getUser} from "../../../actions";
 
 const {Content} = Layout;
 
 export default class EducationComponent extends React.Component {
 
-    getProfile = () => useSelector(getUser);
-
     componentDidMount() {
-        this.getProfile();
+        console.log("Hello")
     }
 
     public render() {

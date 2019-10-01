@@ -11,12 +11,12 @@
     "js-yaml": "^3.13.1",
     "mem": "^5.1.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "react-dom": "^16.10.1",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
     "react-scripts-ts": "^4.0.8",
     "redux": "^4.0.1",
-    "redux-thunk": "latest",
+    "redux-thunk": "^2.3.0",
     "ts-loader": "^6.2.0",
     "typesafe-actions": "^4.2.0"
   },
@@ -35,6 +35,7 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-redux": "^7.1.4",
     "@types/react-router-dom": "^5.1.0",
+    "eslint-plugin-react-hooks": "^2.1.1",
     "redux-devtools-extension": "^2.13.8",
     "typescript": "^3.6.3"
   },
