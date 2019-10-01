@@ -1,4 +1,4 @@
-type Education = {
+interface Education {
     ID: string;
     UserID: string;
     Title: string;

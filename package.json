@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@types/react-redux": "^7.0.8",
     "antd": "^3.23.3",
+    "axios": "latest",
     "env-cmd": "^10.0.1",
     "firebase": "^7.0.0",
     "js-yaml": "^3.13.1",
@@ -11,17 +13,15 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
-    "ts-loader": "^5.4.5",
-    "typesafe-actions": "^4.2.0",
-    "@types/react-redux": "^7.0.8",
-    "redux": "^4.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts-ts": "^4.0.8",
-    "webpack-dev-server": "^3.1.11",
-    "redux-thunk": "latest"
+    "redux": "^4.0.1",
+    "redux-thunk": "latest",
+    "ts-loader": "^6.2.0",
+    "typesafe-actions": "^4.2.0"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts-ts start",
+    "start": "BROWSER=none PORT=8080 react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
@@ -35,6 +35,13 @@
     "@types/react-dom": "^16.9.1",
     "@types/react-redux": "^7.1.4",
     "@types/react-router-dom": "^5.1.0",
+    "redux-devtools-extension": "^2.13.8",
     "typescript": "^3.6.3"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

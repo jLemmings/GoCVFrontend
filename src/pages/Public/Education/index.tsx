@@ -1,22 +1,16 @@
 import * as React from "react";
 import {Layout} from "antd";
+import {useSelector} from "react-redux";
+import {getUser} from "../../../actions";
 
 const {Content} = Layout;
 
 export default class EducationComponent extends React.Component {
 
-    async componentDidMount() {
-        const url = process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID;
-        const response = await fetch(url, {
-            method: 'get'
-        });
-        const data = await response.json();
+    getProfile = () => useSelector(getUser);
 
-        this.setState({
-                loading: false,
-            }
-        );
-        console.log(data);
+    componentDidMount() {
+        this.getProfile();
     }
 
     public render() {

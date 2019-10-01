@@ -7,7 +7,9 @@
     "object-literal-sort-keys": [false],
     "no-console": false,
     "member-access": [false],
-    "jsdoc-format": false
+    "jsdoc-format": false,
+    "object-literal-shorthand": false,
+    "no-shadowed-variable": false
   },
   "linterOptions": {
     "exclude": ["config/**/*.js", "node_modules/**/*.ts"]

@@ -1,4 +1,4 @@
-export type User = {
+export class User {
     ID: string;
     FirstName: string;
     LastName: string;
@@ -8,25 +8,17 @@ export type User = {
     GithubProfile: string;
     Experience: Experience;
     Education: Education;
-};
+}
 
-export const SEND_USER = 'SEND_USER';
-export const DELETE_USER = 'DELETE_USER';
+export const GET_USER = 'GET_USER';
 
 export interface UserState {
-    users: User[];
+    user: User;
 }
 
-interface SendUserAction {
-    type: typeof SEND_USER
-    payload: User
+export interface GetUserAction {
+    type: typeof GET_USER
 }
 
-interface DeleteUserAction {
-    type: typeof DELETE_USER
-    meta: {
-        id: string
-    }
-}
 
-export type UserActionTypes = SendUserAction | DeleteUserAction
+export type UserActionTypes = GetUserAction

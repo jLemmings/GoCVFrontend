@@ -1,4 +1,4 @@
-export const SIGN_IN = "/admin/login";
+export const SIGN_IN = "/admin/getUser";
 export const HOME = "/";
 export const ABOUT = "/about";
 export const EXPERIENCE = "/experience";

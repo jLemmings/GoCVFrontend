@@ -16,10 +16,10 @@ import {Projects} from "../pages/Public/Projects";
 import {Stats} from "../pages/Public/Stats";
 import {EditProfile} from "../pages/Authorized/EditProfile";
 import {UserState} from "../model/user";
-import {sendUser} from '../actions/actions';
+import {getUser} from '../actions';
 
 interface AppProps {
-    sendUser: typeof sendUser
+    sendUser: typeof getUser
     user: UserState
 }
 

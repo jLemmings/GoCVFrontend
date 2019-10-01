@@ -1,4 +1,4 @@
-type Experience = {
+interface Experience {
     ID: string;
     UserID: string;
     Title: string;

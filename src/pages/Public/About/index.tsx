@@ -20,7 +20,10 @@ interface InterfaceProps {
     email?: string;
 }
 
+
+
 export default class AboutComponent extends React.Component<InterfaceProps, InterfaceState> {
+
     constructor(props: any) {
         super(props);
         this.state = {
