@@ -1,4 +1,4 @@
-export class User {
+export interface User {
     ID: string;
     FirstName: string;
     LastName: string;
@@ -10,7 +10,7 @@ export class User {
     Education: Education;
 }
 
-export const GET_USER = 'GET_USER';
+export const GET_USER = "GET_USER";
 
 export interface UserState {
     user: User;

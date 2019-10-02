@@ -39,7 +39,7 @@ export default class AboutComponent extends React.Component<InterfaceProps, Inte
         const url = process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID;
         console.log(url);
         const response = await fetch(url, {
-            method: 'get'
+            method: "get"
         });
         const data = await response.json();
 
@@ -57,7 +57,7 @@ export default class AboutComponent extends React.Component<InterfaceProps, Inte
     public render() {
         return (
             <Content className="component">
-                {this.state.loading ? <Icon type="loading" style={{fontSize: '100px'}}/> :
+                {this.state.loading ? <Icon type="loading" style={{fontSize: "100px"}}/> :
                     <div className="aboutMe">
                         <Row type="flex" justify="center" align="middle">
                             <Col span={12}>

@@ -1,18 +1,14 @@
 import * as React from "react";
 import {Layout} from "antd";
+import Demo from "./demo";
 
 const {Content} = Layout;
 
 export default class EducationComponent extends React.Component {
-
-    componentDidMount() {
-        console.log("Hello")
-    }
-
     public render() {
         return (
             <Content className="component">
-                <p>Education</p>
+                <Demo/>
             </Content>
         );
     }

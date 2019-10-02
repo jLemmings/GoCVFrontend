@@ -24,29 +24,29 @@ export default class ProjectsComponent extends React.Component<InterfaceProps, I
 
     columns = [
         {
-            title: 'Name',
-            dataIndex: 'Name',
-            key: 'Name',
+            title: "Name",
+            dataIndex: "Name",
+            key: "Name",
         },
         {
-            title: 'Description',
-            dataIndex: 'Description',
-            key: 'Description',
+            title: "Description",
+            dataIndex: "Description",
+            key: "Description",
         },
         {
-            title: 'Language',
-            dataIndex: 'Language',
-            key: 'Language',
+            title: "Language",
+            dataIndex: "Language",
+            key: "Language",
         },
         {
-            title: 'URL',
-            dataIndex: 'URL',
-            key: 'URL',
+            title: "URL",
+            dataIndex: "URL",
+            key: "URL",
         },
         {
-            title: 'Last Update',
-            dataIndex: 'LastUpdate',
-            key: 'LastUpdate',
+            title: "Last Update",
+            dataIndex: "LastUpdate",
+            key: "LastUpdate",
         },
     ];
 
@@ -60,7 +60,7 @@ export default class ProjectsComponent extends React.Component<InterfaceProps, I
     async componentDidMount() {
         const url = process.env.REACT_APP_BASE_URL + "/projects/" + process.env.REACT_APP_USER_ID;
         const response = await fetch(url, {
-            method: 'get'
+            method: "get"
         });
         const data = await response.json();
 
@@ -82,7 +82,7 @@ export default class ProjectsComponent extends React.Component<InterfaceProps, I
                 {this.state.loading ? <div>
                         <Row type="flex" justify="center" style={{height: "100%", paddingTop: "20px"}}>
                             <Col span={4}>
-                                <Icon type="loading" style={{fontSize: '100px'}}/>
+                                <Icon type="loading" style={{fontSize: "100px"}}/>
                             </Col>
                         </Row>
                     </div> :

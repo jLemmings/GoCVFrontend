@@ -7,8 +7,15 @@
   "rules": {
     "jsx-no-lambda": false,
     "interface-name": false,
+    "no-angle-bracket-type-assertion": false,
     "ordered-imports": [
       false
+    ],
+    "quotemark": [
+      true,
+      "double",
+      "avoid-escape",
+      "avoid-template"
     ],
     "object-literal-sort-keys": [
       false

@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as routes from "../../../constants/routes";
 import {auth} from "../../../firebase";
-import {Form, Icon, Input, Button} from 'antd';
-import {RouteComponentProps, withRouter} from 'react-router-dom';
+import {Form, Icon, Input, Button} from "antd";
+import {RouteComponentProps, withRouter} from "react-router-dom";
 import "./SignIn.css";
 
 interface InterfaceProps extends RouteComponentProps<any> {
@@ -67,7 +67,7 @@ export class SignInForm extends React.Component<InterfaceProps,
                     <Input
                         id="text-area"
                         style={{marginBottom: "5vh"}}
-                        prefix={<Icon type="user" style={{color: 'rgba(0,0,0,.25'}}/>}
+                        prefix={<Icon type="user" style={{color: "rgba(0,0,0,.25"}}/>}
                         placeholder="Email"
                         onChange={(event: any) => this.setStateWithEvent(event, "email")}
                     />,
@@ -76,7 +76,7 @@ export class SignInForm extends React.Component<InterfaceProps,
                     <Input
                         id="text-area"
                         style={{marginBottom: "1vh"}}
-                        prefix={<Icon type="lock" style={{color: 'rgba(0,0,0,.25'}}/>}
+                        prefix={<Icon type="lock" style={{color: "rgba(0,0,0,.25"}}/>}
                         type="password"
                         placeholder="Password"
                         onChange={(event: any) => this.setStateWithEvent(event, "password")}

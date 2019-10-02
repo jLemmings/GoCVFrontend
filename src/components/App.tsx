@@ -5,7 +5,7 @@ import {firebase} from "../firebase";
 import {withAuthentication} from "../firebase/withAuthentication";
 import {Home} from "../pages/Public/Home";
 import {SignIn} from "../pages/Public/SignIn";
-import 'antd/dist/antd.css';
+import "antd/dist/antd.css";
 import "../index.css";
 import {AdminHome} from "../pages/Authorized/AdminHome";
 import {Experience} from "../pages/Public/Experience";
@@ -16,7 +16,7 @@ import {Projects} from "../pages/Public/Projects";
 import {Stats} from "../pages/Public/Stats";
 import {EditProfile} from "../pages/Authorized/EditProfile";
 import {UserState} from "../model/user";
-import {getUser} from '../actions';
+import {getUser} from "../actions";
 
 interface AppProps {
     sendUser: typeof getUser

@@ -1,7 +1,7 @@
 import * as React from "react";
 import {Col, Icon, Layout, Menu, Row} from "antd";
 import {Link, Route, Switch} from "react-router-dom";
-import logo from "../../../assets/profile_image.jpg";
+import * as logo from "../../../assets/profile_image.jpg";
 import * as routes from "../../../constants/routes";
 import MyFooter from "../../../components/MyFooter";
 import {EditProfile} from "../EditProfile";
@@ -15,7 +15,7 @@ export class AdminHomeComponent extends React.Component {
     public render() {
         return (
             <div>
-                <Layout style={{minHeight: '100vh'}}>
+                <Layout style={{minHeight: "100vh"}}>
                     <Sider breakpoint="lg"
                            collapsedWidth="0"
                            onBreakpoint={broken => {
@@ -40,7 +40,7 @@ export class AdminHomeComponent extends React.Component {
                             </Col>
                         </Row>
 
-                        <Menu theme="dark" defaultSelectedKeys={['4']} mode="inline">
+                        <Menu theme="dark" defaultSelectedKeys={["4"]} mode="inline">
                             <Menu.Item key="1">
                                 <Icon type="mail"/>
                                 Experience
