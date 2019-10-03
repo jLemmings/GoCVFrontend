@@ -1,13 +1,21 @@
-import {useSelector, useStore} from "react-redux";
+import {useSelector} from "react-redux";
 import React from "react";
-import {AccessUser} from "../../../reducers/userReducer";
+import {State} from "../../../reducers/";
+import {User} from "../../../model/user";
 
-export default function EducationComponent() {
-    const store: AccessUser = useStore().getState();
-    console.log(store);
-    const isLoaded: boolean = useSelector((state: AccessUser) => state.isLoaded);
+export const Demo = () => {
+    const isLoaded: boolean = useSelector((state: State) => state.userProfile.isLoaded);
+    const isFetching: boolean = useSelector((state: State) => state.userProfile.isFetching);
+    const user: User = useSelector((state: State) => state.userProfile.user);
     console.log(isLoaded);
+    console.log(isFetching);
+    console.log(user);
     return (
-        <p>{isLoaded}</p>
+        <div>
+            <h1>Hello</h1>
+            <h1>{user.LastName}</h1>
+            <h1>{user.GithubProfile}</h1>
+            <h1>{user.FirstName}</h1>
+        </div>
     )
 }

@@ -1,9 +1,10 @@
 import * as React from "react";
 import {Layout} from "antd";
+import {Component} from "react";
 
 const {Content} = Layout;
 
-export default class SkillsComponent extends React.Component {
+export default class SkillsComponent extends Component {
 
     public render() {
         return (

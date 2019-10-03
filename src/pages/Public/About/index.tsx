@@ -1,6 +1,7 @@
 import * as React from "react";
 import {Col, Icon, Layout, Row} from "antd";
 import "./about.css";
+import {Component} from "react";
 
 
 const {Content} = Layout;
@@ -22,7 +23,7 @@ interface InterfaceProps {
 
 
 
-export default class AboutComponent extends React.Component<InterfaceProps, InterfaceState> {
+export default class AboutComponent extends Component<InterfaceProps, InterfaceState> {
 
     constructor(props: any) {
         super(props);

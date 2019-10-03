@@ -17,13 +17,14 @@ import {Stats} from "../pages/Public/Stats";
 import {EditProfile} from "../pages/Authorized/EditProfile";
 import {UserState} from "../model/user";
 import {getUser} from "../actions";
+import {Component} from "react";
 
 interface AppProps {
     sendUser: typeof getUser
     user: UserState
 }
 
-class AppComponent extends React.Component<AppProps> {
+class AppComponent extends Component<AppProps> {
     constructor(props: any) {
         super(props);
         this.state = {

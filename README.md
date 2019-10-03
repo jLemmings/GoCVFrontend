@@ -1,3 +1,3 @@
 # go-cv-frontend
 
-My Pers page
+My Personal page

@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Col, Icon, Layout, Row, Table} from "antd";
+import {Component} from "react";
 
 const {Content} = Layout;
 
@@ -20,7 +21,7 @@ interface InterfaceProps {
     email?: string;
 }
 
-export default class ProjectsComponent extends React.Component<InterfaceProps, InterfaceState> {
+export default class ProjectsComponent extends Component<InterfaceProps, InterfaceState> {
 
     columns = [
         {

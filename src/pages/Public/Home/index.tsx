@@ -10,11 +10,12 @@ import {Skills} from "../Skills";
 import {Education} from "../Education";
 import {About} from "../About";
 import {Stats} from "../Stats";
+import {Component} from "react";
 
 const {Footer, Sider, Content} = Layout;
 
 
-export class HomeComponent extends React.Component {
+export class HomeComponent extends Component {
     public render() {
         return (
             <div>

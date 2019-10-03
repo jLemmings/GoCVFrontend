@@ -4,6 +4,7 @@ import {auth} from "../../../firebase";
 import {Form, Icon, Input, Button} from "antd";
 import {RouteComponentProps, withRouter} from "react-router-dom";
 import "./SignIn.css";
+import {Component} from "react";
 
 interface InterfaceProps extends RouteComponentProps<any> {
     email?: string;
@@ -17,7 +18,7 @@ interface InterfaceState {
     password: string;
 }
 
-export class SignInForm extends React.Component<InterfaceProps,
+export class SignInForm extends Component<InterfaceProps,
     InterfaceState> {
     private static INITIAL_STATE = {
         email: "",

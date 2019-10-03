@@ -7,11 +7,18 @@ export interface AccessUser {
     user: User
 }
 
-export interface State {
-    user: AccessUser;
-}
-
-export const userReducer = (state: AccessUser = {isLoaded: false, isFetching: false, user:  <User>{}}, action: Action): AccessUser => {
+export const userReducer = (
+    state: AccessUser = {
+        isLoaded: false,
+        isFetching: false,
+        user: <User>{
+            FirstName: "Derp",
+            LastName: "Herp",
+            Email: "derp@jerp.ch",
+            Bio: "HIRE ME",
+            GithubProfile: "jLemmings",
+        }
+    }, action: Action): AccessUser => {
     switch (action.type) {
         case "SET":
             return {...state, user: action.user};
@@ -19,7 +26,7 @@ export const userReducer = (state: AccessUser = {isLoaded: false, isFetching: fa
             return {...state, isFetching: action.isFetching};
         case "SET_LOADED":
             return {...state, isLoaded: action.isLoaded};
-        default:{
+        default: {
             return state
         }
     }

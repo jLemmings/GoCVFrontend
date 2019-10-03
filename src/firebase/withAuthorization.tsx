@@ -9,7 +9,7 @@ interface InterfaceProps {
 }
 
 export const withAuthorization = (condition: any) => (Component: any) => {
-  class WithAuthorization extends React.Component<InterfaceProps, {}> {
+  class WithAuthorization extends Component<InterfaceProps, {}> {
     public componentDidMount() {
       firebase.auth.onAuthStateChanged(authUser => {
         if (!condition(authUser)) {

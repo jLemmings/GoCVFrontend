@@ -7,11 +7,12 @@ import MyFooter from "../../../components/MyFooter";
 import {EditProfile} from "../EditProfile";
 import {withAuthorization} from "../../../firebase/withAuthorization";
 import {Projects} from "../../Public/Projects";
+import {Component} from "react";
 
 const {Content, Footer, Sider} = Layout;
 
 
-export class AdminHomeComponent extends React.Component {
+export class AdminHomeComponent extends Component {
     public render() {
         return (
             <div>

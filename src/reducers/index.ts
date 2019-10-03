@@ -1,5 +1,9 @@
 import {combineReducers} from "redux";
-import {userReducer} from "./userReducer";
+import {AccessUser, userReducer} from "./userReducer";
+
+export interface State {
+    userProfile: AccessUser;
+}
 
 export const rootReducer = combineReducers({
     userProfile: userReducer
