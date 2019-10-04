@@ -6,6 +6,7 @@
     "@types/react-redux": "^7.1.4",
     "antd": "^3.23.3",
     "axios": "latest",
+    "css-loader": "^3.2.0",
     "env-cmd": "^10.0.1",
     "firebase": "^7.1.0",
     "js-yaml": "^3.13.1",
@@ -46,7 +47,6 @@
   },
   "browserslist": [
     ">0.2%",
-    "not dead",
     "not ie <= 11",
     "not op_mini all"
   ]
