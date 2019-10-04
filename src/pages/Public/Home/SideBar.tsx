@@ -2,7 +2,6 @@ import {Col, Icon, Layout, Menu, Row} from "antd";
 import logo from "../../../assets/profile_image.jpg";
 import {Link, Route, Switch} from "react-router-dom";
 import * as routes from "../../../constants/routes";
-import {Experience} from "../Experience";
 import {Education} from "../Education";
 import {Skills} from "../Skills";
 import {About} from "../About";
@@ -13,16 +12,12 @@ import * as React from "react";
 import {useSelector} from "react-redux";
 import {State} from "../../../reducers";
 import {User} from "../../../model/user";
+import ExperienceComponent from "../Experience";
 
 const {Footer, Sider, Content} = Layout;
 
 export const SideBar = () => {
-    const isLoaded: boolean = useSelector((state: State) => state.userProfile.isLoaded);
-    const isFetching: boolean = useSelector((state: State) => state.userProfile.isFetching);
     const user: User = useSelector((state: State) => state.userProfile.user);
-    console.log(isLoaded);
-    console.log(isFetching);
-    console.log(user);
     return (
         <div>
             <Layout style={{minHeight: "100vh"}}>
@@ -82,7 +77,7 @@ export const SideBar = () => {
                     <Content>
                         <Switch>
                             <Route path={routes.EXPERIENCE}>
-                                <Experience/>
+                                <ExperienceComponent/>
                             </Route>
                             <Route path={routes.EDUCATION}>
                                 <Education/>

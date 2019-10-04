@@ -4,14 +4,9 @@ import {State} from "../../../reducers/";
 import {User} from "../../../model/user";
 
 
-
-export const Demo = () => {
-    const isLoaded: boolean = useSelector((state: State) => state.userProfile.isLoaded);
-    const isFetching: boolean = useSelector((state: State) => state.userProfile.isFetching);
+export const EducationContent = () => {
     const user: User = useSelector((state: State) => state.userProfile.user);
-    console.log(isLoaded);
-    console.log(isFetching);
-    console.log(user);
+
     return (
         <div>
             <h1>Hello</h1>

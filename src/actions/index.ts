@@ -21,6 +21,7 @@ export interface SetLoaded {
 export type Action = SetUser | SetFetching | SetLoaded
 
 export const set = (user: User): SetUser => {
+    console.log("IN ACTION:", user);
     return {type: "SET", user: user}
 };
 
@@ -33,6 +34,7 @@ export const isLoaded = (isLoaded: boolean): SetLoaded => {
 };
 
 export const getUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
+
     return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => {
         return new Promise<void>((resolve) => {
             dispatch(isFetching(true));
@@ -41,21 +43,20 @@ export const getUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
                 let user = <User>{};
                 axios.get(process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID)
                     .then(response => {
-                        console.log(response.data);
                         user = response.data.data;
+                        console.log("USER:", user);
                         dispatch(isLoaded(true));
+                        dispatch(set(user));
                     })
                     .catch(error => {
                         console.log(error);
                     });
-
-                dispatch(set(user));
                 setTimeout(() => {
                     dispatch(isFetching(false));
-                    console.log("Login done");
+                    console.log("LOADED PROFILE");
                     resolve()
                 }, 1000)
             }, 3000)
         })
     }
-};
+}

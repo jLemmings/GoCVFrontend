@@ -2,12 +2,14 @@
   "extends": [
     "tslint:recommended",
     "tslint-react",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "tslint-react-hooks"
   ],
   "rules": {
     "jsx-no-lambda": false,
     "interface-name": false,
     "no-angle-bracket-type-assertion": false,
+    "react-hooks-nesting": "error",
     "ordered-imports": [
       false
     ],
