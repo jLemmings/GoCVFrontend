@@ -1,4 +1,4 @@
-import {Col, Icon, Layout, Menu, Row} from "antd";
+import {Col, Icon, Layout, Menu, Row, Spin} from "antd";
 import logo from "../../../assets/profile_image.jpg";
 import {Link, Route, Switch} from "react-router-dom";
 import * as routes from "../../../constants/routes";
@@ -18,6 +18,8 @@ const {Footer, Sider, Content} = Layout;
 
 export const SideBar = () => {
     const user: User = useSelector((state: State) => state.userProfile.user);
+    const isLoaded: boolean = useSelector((state: State) => state.userProfile.isLoaded);
+
     return (
         <div>
             <Layout style={{minHeight: "100vh"}}>
@@ -73,28 +75,45 @@ export const SideBar = () => {
                     </Menu>
                 </Sider>
 
-                <Layout>
+                <Layout className="home">
                     <Content>
-                        <Switch>
-                            <Route path={routes.EXPERIENCE}>
-                                <ExperienceComponent/>
-                            </Route>
-                            <Route path={routes.EDUCATION}>
-                                <Education/>
-                            </Route>
-                            <Route path={routes.SKILLS}>
-                                <Skills/>
-                            </Route>
-                            <Route path={routes.ABOUT}>
-                                <About/>
-                            </Route>
-                            <Route path={routes.PROJECTS}>
-                                <Projects/>
-                            </Route>
-                            <Route path={routes.STATS}>
-                                <Stats/>
-                            </Route>
-                        </Switch>
+                        {isLoaded ? (
+                            <div className="full-height" style={{height: "100%"}}>
+                                <Switch>
+                                    <Route path={routes.EXPERIENCE}>
+                                        <ExperienceComponent/>
+                                    </Route>
+                                    <Route path={routes.EDUCATION}>
+                                        <Education/>
+                                    </Route>
+                                    <Route path={routes.SKILLS}>
+                                        <Skills/>
+                                    </Route>
+                                    <Route path={routes.ABOUT}>
+                                        <About/>
+                                    </Route>
+                                    <Route path={routes.PROJECTS}>
+                                        <Projects/>
+                                    </Route>
+                                    <Route path={routes.STATS}>
+                                        <Stats/>
+                                    </Route>
+                                </Switch>
+                            </div>
+                        ) : (
+                            <div className="loading-spin"
+                                 style={{backgroundColor: "#2b2e44", height: "100%", textAlign: "center", paddingTop: "40%"}}>
+                                <Row type="flex" justify="space-around" align="middle">
+                                    <Col span={12}>
+                                        <Spin size="large"/>
+                                        <h1>Fetching up to date information about myself.</h1>
+                                    </Col>
+                                </Row>
+
+                            </div>
+                        )}
+
+
                     </Content>
                     <Footer>
                         <MyFooter/>

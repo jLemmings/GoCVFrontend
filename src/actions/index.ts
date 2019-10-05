@@ -38,7 +38,8 @@ export const getUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
     return async (dispatch: ThunkDispatch<{}, {}, AnyAction>): Promise<void> => {
         return new Promise<void>((resolve) => {
             dispatch(isFetching(true));
-            console.log("FETCHING PROFILE IN PROGRESS");
+            console.log("FETCHING PROFILE IN PROGRESS, ID: ", process.env.REACT_APP_USER_ID);
+
             setTimeout(() => {
                 let user = <User>{};
                 axios.get(process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID)

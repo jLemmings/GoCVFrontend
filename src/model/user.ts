@@ -8,6 +8,7 @@ export interface User {
     GithubProfile: string;
     Experience: Experience;
     Education: Education;
+    Projects: Project[]
 }
 
 export const GET_USER = "GET_USER";
