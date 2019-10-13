@@ -39,15 +39,24 @@ export const ProjectsContent = () => {
 
     return (
         <div>
-            <h1>Projects</h1>
-            <div className="projectTable">
+            <div className="component-title">
+                <Row type="flex" justify="center" align="middle">
+                    <Col span={24}>
+                        <h1>Projects</h1>
+                    </Col>
+                </Row>
+            </div>
+            <div className="project-table">
                 <Row type="flex" justify="center" align="middle">
                     <Col span={20}>
                         <Table
-                            className="projectTable"
+                            className="projects-table"
+                            showHeader={true}
                             dataSource={user.Projects}
                             columns={columns}
                             rowKey="URL"
+                            bodyStyle={{color: "white", backgroundColor: "#30303d"}}
+                            useFixedHeader={true}
                         />
                     </Col>
                 </Row>

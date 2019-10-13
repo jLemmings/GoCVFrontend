@@ -45,7 +45,6 @@ export const getUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
                 axios.get(process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID)
                     .then(response => {
                         user = response.data.data;
-                        console.log("USER:", user);
                         dispatch(isLoaded(true));
                         dispatch(set(user));
                     })

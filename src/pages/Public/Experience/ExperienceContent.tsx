@@ -4,7 +4,7 @@ import {State} from "../../../reducers/";
 import {User} from "../../../model/user";
 import {Card, Col, Icon, Row, Timeline} from "antd";
 import moment from "moment";
-import {Education} from "../../../model/education";
+import {Experience} from "../../../model/experience";
 
 export const ExperienceContent = () => {
     const user: User = useSelector((state: State) => state.userProfile.user);
@@ -15,33 +15,52 @@ export const ExperienceContent = () => {
 
     return (
         <div>
+            <div className="component-title">
+                <Row type="flex" justify="center" align="middle">
+                    <Col span={24}>
+                        <h1>Experience</h1>
+                    </Col>
+                </Row>
+            </div>
             <Row type="flex" justify="space-around" align="middle">
-                <Col span={12}>
-                    <div className="component-title">
-                        <h1>Education</h1>
-                    </div>
-                    {user.Education !== undefined ? (
-                    <div>
-                        <Timeline mode="alternate">
-                            {user.Education.map((item: Education) =>
-                                <Timeline.Item key={item.Title}>
-                                    <Card title={item.Title}>
-                                        <p>{item.Institute}</p>
-                                        <p>
-                                            <Icon type="calendar"/>
-                                            {moment(item.From).format("MM.YYYY")}
-                                            &emsp;
-                                            &ndash;
-                                            &emsp;
-                                            {moment(item.To).format("MM.YYYY")}
-                                        </p>
-                                    </Card>
+                <Col span={20}>
+                    {user.Experience !== undefined ? (
+                        <div>
+                            <Timeline mode="alternate">
+                                {user.Experience.map((item: Experience) =>
+                                    <Timeline.Item key={item.Title}>
+                                        <Card
+                                            title={item.Title}
+                                            style={{borderColor: "#001529"}}
+                                            headStyle={{
+                                                backgroundColor: "#20202b",
+                                                color: "#E3E3E3",
+                                            }}
+                                            bodyStyle={{
+                                                backgroundColor: "#30303d",
+                                                color: "#E3E3E3",
+                                            }}
+                                        >
+                                            <p>{item.Description}</p>
+                                            <p>
+                                                <Icon type="calendar"/>
+                                                {moment(item.From).format("MM.YYYY")}
+                                                &emsp;
+                                                &ndash;
+                                                &emsp;
+                                                {moment(item.To).format("MM.YYYY")}
+                                            </p>
+                                            {item.Tasks.map((task: string) =>
+                                                <ul key={task}>
+                                                    <li>{task}</li>
+                                                </ul>)}
+                                        </Card>
 
-                                </Timeline.Item>
-                            )}
-                        </Timeline>
-                    </div>
-                        ) : (<p>loading</p>)}
+                                    </Timeline.Item>
+                                )}
+                            </Timeline>
+                        </div>
+                    ) : (<p>loading</p>)}
                 </Col>
             </Row>
         </div>

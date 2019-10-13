@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Layout} from "antd";
+import {Col, Layout, Row} from "antd";
 import {Component} from "react";
 
 const {Content} = Layout;
@@ -9,7 +9,13 @@ export default class SkillsComponent extends Component {
     public render() {
         return (
             <Content className="component">
-                <p>Skills</p>
+                <div className="component-title">
+                    <Row type="flex" justify="center" align="middle">
+                        <Col span={24}>
+                            <h1>Skills</h1>
+                        </Col>
+                    </Row>
+                </div>
             </Content>
         );
     }

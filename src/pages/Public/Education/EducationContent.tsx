@@ -30,18 +30,22 @@ export const EducationContent = () => {
                                       style={{backgroundColor: "none"}}
                             >
                                 {user.Education.map((item: Education) =>
-                                    <Timeline.Item key={item.Title} style={{borderLeft: "2px solid red;"}}>
-                                        <Card title={item.Title}
-                                              className="card"
-                                              style={{borderColor: "#001529"}}
-                                              headStyle={{
-                                                  backgroundColor: "#20202b",
-                                                  color: "#E3E3E3",
-                                              }}
-                                              bodyStyle={{
-                                                  backgroundColor: "#30303d",
-                                                  color: "#E3E3E3",
-                                              }}
+                                    <Timeline.Item
+                                        key={item.Title}
+                                        style={{borderLeft: "2px solid red;"}}
+                                    >
+                                        <Card
+                                            title={item.Title}
+                                            className="card"
+                                            style={{borderColor: "#001529"}}
+                                            headStyle={{
+                                                backgroundColor: "#20202b",
+                                                color: "#E3E3E3",
+                                            }}
+                                            bodyStyle={{
+                                                backgroundColor: "#30303d",
+                                                color: "#E3E3E3",
+                                            }}
                                         >
                                             <p>{item.Institute}</p>
                                             <p>

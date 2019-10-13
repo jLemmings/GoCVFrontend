@@ -8,7 +8,15 @@ export const AboutContent = () => {
     const user: User = useSelector((state: State) => state.userProfile.user);
 
     return (
+
         <div className="aboutMe">
+            <div className="component-title">
+                <Row type="flex" justify="center" align="middle">
+                    <Col span={24}>
+                        <h1>Who am I?</h1>
+                    </Col>
+                </Row>
+            </div>
             <Row type="flex" justify="center" align="middle">
                 <Col span={12}>
                     <div className="profileName">
