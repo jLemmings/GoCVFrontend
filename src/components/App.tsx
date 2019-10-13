@@ -8,7 +8,7 @@ import {SignIn} from "../pages/Public/SignIn";
 import "antd/dist/antd.css";
 import "../index.css";
 import {AdminHome} from "../pages/Authorized/AdminHome";
-import {Education} from "../pages/Public/Education";
+import {EducationPage} from "../pages/Public/Education";
 import Experience from "../pages/Public/Experience";
 import {Skills} from "../pages/Public/Skills";
 import {About} from "../pages/Public/About";
@@ -51,7 +51,7 @@ class AppComponent extends Component<AppProps> {
 
                     <Home>
                         <Route exact={true} path={routes.EXPERIENCE} component={Experience}/>
-                        <Route exact={true} path={routes.EDUCATION} component={Education}/>
+                        <Route exact={true} path={routes.EDUCATION} component={EducationPage}/>
                         <Route exact={true} path={routes.SKILLS} component={Skills}/>
                         <Route exact={true} path={routes.ABOUT} component={About}/>
                         <Route exact={true} path={routes.PROJECTS} component={Projects}/>

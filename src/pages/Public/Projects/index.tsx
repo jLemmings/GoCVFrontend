@@ -8,9 +8,6 @@ const {Content} = Layout;
 
 
 export default class ProjectsComponent extends Component {
-
-
-
     constructor(props: any) {
         super(props);
     }
@@ -18,7 +15,6 @@ export default class ProjectsComponent extends Component {
 
 
     public render() {
-
         return (
             <Content className="component">
                 <ProjectsContent/>

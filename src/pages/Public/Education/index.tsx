@@ -1,11 +1,11 @@
 import * as React from "react";
 import {Layout} from "antd";
-import {EducationContent} from "./educationContent";
+import {EducationContent} from "./EducationContent";
 import {Component} from "react";
 
 const {Content} = Layout;
 
-export class EducationComponent extends Component {
+export default class EducationComponent extends Component {
 
     constructor(props: any) {
         super(props);
@@ -21,4 +21,5 @@ export class EducationComponent extends Component {
 
 }
 
-export const Education = (EducationComponent);
+export const EducationPage = (EducationComponent);
+

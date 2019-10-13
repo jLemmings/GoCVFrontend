@@ -21,7 +21,6 @@ export interface SetLoaded {
 export type Action = SetUser | SetFetching | SetLoaded
 
 export const set = (user: User): SetUser => {
-    console.log("IN ACTION:", user);
     return {type: "SET", user: user}
 };
 
@@ -42,6 +41,7 @@ export const getUser = (): ThunkAction<Promise<void>, {}, {}, AnyAction> => {
 
             setTimeout(() => {
                 let user = <User>{};
+                console.log(process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID);
                 axios.get(process.env.REACT_APP_BASE_URL + "/users/" + process.env.REACT_APP_USER_ID)
                     .then(response => {
                         user = response.data.data;

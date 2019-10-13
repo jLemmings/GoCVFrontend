@@ -1,17 +1,13 @@
 import {Col, Icon, Layout, Menu, Row, Spin} from "antd";
 import {Link, Route, Switch} from "react-router-dom";
 import * as routes from "../../../constants/routes";
-import Education from "../Education";
-import {Skills} from "../Skills";
-import {About} from "../About";
-import {Projects} from "../Projects";
-import {Stats} from "../Stats";
 import MyFooter from "../../../components/MyFooter";
 import * as React from "react";
 import {useSelector} from "react-redux";
 import {State} from "../../../reducers";
 import {User} from "../../../model/user";
-import ExperienceComponent from "../Experience";
+import EditProfileComponent from "../EditProfile";
+
 
 const {Footer, Sider, Content} = Layout;
 
@@ -44,32 +40,7 @@ export const SideBar = () => {
                         <Menu.Item key="1">
                             <Icon type="mail"/>
                             Experience
-                            <Link to={routes.EXPERIENCE}/>
-                        </Menu.Item>
-                        <Menu.Item key="2">
-                            <Icon type="book"/>
-                            Education
-                            <Link to={routes.EDUCATION}/>
-                        </Menu.Item>
-                        <Menu.Item key="3">
-                            <Icon type="experiment"/>
-                            Skills
-                            <Link to={routes.SKILLS}/>
-                        </Menu.Item>
-                        <Menu.Item key="4">
-                            <Icon type="user"/>
-                            Who am I?
-                            <Link to={routes.ABOUT}/>
-                        </Menu.Item>
-                        <Menu.Item key="5">
-                            <Icon type="branches"/>
-                            Projects
-                            <Link to={routes.PROJECTS}/>
-                        </Menu.Item>
-                        <Menu.Item key="6">
-                            <Icon type="line-chart"/>
-                            Stats
-                            <Link to={routes.STATS}/>
+                            <Link to={routes.EDIT_PROFILE}/>
                         </Menu.Item>
                     </Menu>
 
@@ -82,22 +53,7 @@ export const SideBar = () => {
                             <div className="full-height" style={{height: "100%"}}>
                                 <Switch>
                                     <Route path={routes.EXPERIENCE}>
-                                        <ExperienceComponent/>
-                                    </Route>
-                                    <Route path={routes.EDUCATION}>
-                                        <Education/>
-                                    </Route>
-                                    <Route path={routes.SKILLS}>
-                                        <Skills/>
-                                    </Route>
-                                    <Route path={routes.ABOUT}>
-                                        <About/>
-                                    </Route>
-                                    <Route path={routes.PROJECTS}>
-                                        <Projects/>
-                                    </Route>
-                                    <Route path={routes.STATS}>
-                                        <Stats/>
+                                        <EditProfileComponent/>
                                     </Route>
                                 </Switch>
                             </div>

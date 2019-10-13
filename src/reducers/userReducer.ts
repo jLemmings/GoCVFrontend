@@ -11,13 +11,7 @@ export const userReducer = (
     state: AccessUser = {
         isLoaded: false,
         isFetching: false,
-        user: <User>{
-            FirstName: "Derp",
-            LastName: "Herp",
-            Email: "derp@jerp.ch",
-            Bio: "HIRE ME",
-            GithubProfile: "jLemmings",
-        }
+        user: <User>{}
     }, action: Action): AccessUser => {
     switch (action.type) {
         case "SET":

@@ -29,13 +29,13 @@ export class AdminHomeComponent extends Component {
                         <Row type="flex" justify="center" align="middle">
                             <Col>
                                 <div className="Profile">
-                                    <img src={logo} className="ProfileImage" alt="Profile"/>
+                                    <img src={logo} className="profile-image" alt="Profile"/>
                                 </div>
                             </Col>
                         </Row>
                         <Row type="flex" justify="center" align="middle">
                             <Col>
-                                <div className="ProfileName">
+                                <div className="profile-name">
                                     <p>Joshua Hemmings</p>
                                 </div>
                             </Col>
