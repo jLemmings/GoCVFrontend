@@ -27,12 +27,13 @@ export const EducationContent = () => {
                     {user.Education !== undefined ? (
                         <div>
                             <Timeline mode="alternate"
-                                      style={{backgroundColor: "none"}}
+                                      style={{
+                                          backgroundColor: "none",
+                                      }}
                             >
                                 {user.Education.map((item: Education) =>
                                     <Timeline.Item
                                         key={item.Title}
-                                        style={{borderLeft: "2px solid red;"}}
                                     >
                                         <Card
                                             title={item.Title}

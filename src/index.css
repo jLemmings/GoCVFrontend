@@ -94,3 +94,11 @@ body {
 .component-title h1 {
     margin-bottom: 0;
 }
+
+.ant-card-body {
+    padding: 12px;
+}
+
+.ant-card-body p {
+    margin-bottom: 0.5em;
+}
