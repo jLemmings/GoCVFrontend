@@ -2,6 +2,7 @@ import * as React from "react";
 import {Layout} from "antd";
 import {Component} from "react";
 import {ProjectsContent} from "./ProjectsContent";
+import "./projects.css";
 
 const {Content} = Layout;
 

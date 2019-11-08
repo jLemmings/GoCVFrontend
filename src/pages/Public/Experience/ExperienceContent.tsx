@@ -9,10 +9,6 @@ import {Experience} from "../../../model/experience";
 export const ExperienceContent = () => {
     const user: User = useSelector((state: State) => state.userProfile.user);
 
-    console.log("User Name: ", user.FirstName);
-    console.log("EducationPage: ", user.Education);
-
-
     return (
         <div>
             <div className="component-title">
@@ -28,22 +24,15 @@ export const ExperienceContent = () => {
                         <div>
                             <Timeline mode="alternate">
                                 {user.Experience.map((item: Experience) =>
-                                    <Timeline.Item key={item.Title}>
+                                    <Timeline.Item
+                                        key={item.Title}
+                                    >
                                         <Card
                                             title={item.Title}
-                                            style={{borderColor: "#001529"}}
-                                            headStyle={{
-                                                backgroundColor: "#20202b",
-                                                color: "#E3E3E3",
-                                            }}
-                                            bodyStyle={{
-                                                backgroundColor: "#30303d",
-                                                color: "#E3E3E3",
-                                            }}
                                         >
                                             <p>{item.Description}</p>
                                             <p>
-                                                <Icon type="calendar"/>
+                                                <Icon type="calendar" className="icon-space"/>
                                                 {moment(item.From).format("MM.YYYY")}
                                                 &emsp;
                                                 &ndash;
@@ -70,19 +59,10 @@ export const ExperienceContent = () => {
                                     <Timeline.Item key={item.Title}>
                                         <Card
                                             title={item.Title}
-                                            style={{borderColor: "#001529"}}
-                                            headStyle={{
-                                                backgroundColor: "#20202b",
-                                                color: "#E3E3E3",
-                                            }}
-                                            bodyStyle={{
-                                                backgroundColor: "#30303d",
-                                                color: "#E3E3E3",
-                                            }}
                                         >
                                             <p>{item.Description}</p>
                                             <p>
-                                                <Icon type="calendar"/>
+                                                <Icon type="calendar" className="icon-space"/>
                                                 {moment(item.From).format("MM.YYYY")}
                                                 &emsp;
                                                 &ndash;
